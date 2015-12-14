@@ -12,6 +12,8 @@ $(window).load(function() {
     animation: "slide",
     directionNav: false,
     controlNav: true,
+    slideshow: true,
+    slideshowSpeed: 5000,
   });
 });
 $(window).load(function() {
