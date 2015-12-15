@@ -107,7 +107,7 @@ $(document).ready(function() {
         name: 'Demo Site',
         description: '2 widgets',
         currency: "eur",
-        amount: 2000
+        amount: 4000
       });
       e.preventDefault();
     });
