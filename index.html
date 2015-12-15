@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="css/flexslider.css?v=1.2" type="text/css">
 		<link rel="stylesheet" href="css/animate.css" type="text/css">
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -248,13 +249,19 @@
             </div>
 					<div class="col-md-6 col-md-offset-3 sign-up">
 						<h2 class="logo-header">Précommande un jean B2B pour seulement 60€. Deux fois moins cher que le prix en boutique...</h2>
-						<form name="signup-form" action="http://formspree.io/davidgeismar@wetennis.fr" method="POST">
-							<input class="signup-input" type="email" name="email_address" value="" placeholder="enter your email..." title="Please enter a valid email address." required>
-							<button type="submit" class="submit-btn">GO</button>
+						<form name="signup-form" action="http://formspree.io/davidgeismar@wetennis.fr" id="conversion_form" method="POST">
+							<input id="email-input" class="signup-input" type="email" name="email_address" value="" placeholder="enter your email..." title="Please enter a valid email address." required>
+							<button type="submit" class="submit-btn"data-toggle="modal" data-target="#myModal">GO</button>
 						</form>
 					</div>
 				</div>
 			</div>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+        </div>
+      </div>
 		</section>
 		<footer id="contact">
 			<div class="container">
@@ -262,14 +269,14 @@
 					<div class="col-md-4 footer-leftcol">
 						<p><span class="bold-16p">PARIS</span><br>
 						Soon in Le Marais<br>
-						<a href="#"> info@b2bjeans.com</a>
+						<a href="#">jeansb2b@gmail.com</a>
 						</p>
 					</div>
 					<div class="col-md-4 footer-midcol">
 						<ul>
-							<li><a href="#" class="twitter-icon">Twitter</a></li>
-							<li><a href="#" class="facebook-icon">Facebook</a></li>
-							<li><a href="#" class="pintrest-icon">Pintrest</a></li>
+							<li><a href="https://twitter.com/b2bjeans" class="twitter-icon">Twitter</a></li>
+							<li><a href="https://www.facebook.com/B2B-765756316864312/" class="facebook-icon">Facebook</a></li>
+							<!-- <li id="insta"><a href="#"><i class="fa fa-instagram"></i></a></li> -->
 						</ul>
 						<div class="clearfix"></div>
 					</div>

@@ -66,6 +66,25 @@ $(document).ready(function() {
     .mouseleave(function() {
       $(this).removeClass("hover");
     });
+    $("#conversion_form").on("submit", function(e){
+       e.preventDefault();
+       var $this = $(this);
+       var email = $('#email-input').val();
+       $.ajax({
+                url: $this.attr('action'), // Le nom du fichier indiqué dans le formulaire
+                method:"POST",
+                dataType: "json", // La méthode indiquée dans le formulaire (get ou post)
+                data: {message: email}, // Je sérialise les données (j'envoie toutes les valeurs présentes dans le formulaire)
+                success: function(data, textStatus, xhr) {
+                    if(xhr.status==200)
+                        alert('Nous vous tiendrons au courant de nos dernières actu ! \n Wefoot');
+                    $('#email-input').val('');
+                    $('#myModal').popover('show');
+
+                }
+            });
+
+    })
   }
 });
 
