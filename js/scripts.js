@@ -93,7 +93,7 @@ $(document).ready(function() {
 $(document).ready(function() {
    var handler = StripeCheckout.configure({
       key: 'pk_test_5gV3lLJvx0mc36rSRhKfrLho',
-      image: '/img/documentation/checkout/marketplace.png',
+      image: '../img/butt-icon.svg',
       locale: 'auto',
       token: function(token) {
         // Use the token to create the charge with a server-side script.
