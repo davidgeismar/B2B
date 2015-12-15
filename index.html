@@ -73,6 +73,11 @@
 					<p class="text-intro">
             Avec plus de quinze ans d'expérience dans l'industrie du Jean. Notre équipe de designers a découvert LA coupe qui permet de mettre en valeur vos fesses en toutes circonstances.
           </p>
+          <h1 class="chain">Notre philosophie</h1>
+          <p class="text-intro">
+            B2B ne travaille qu'avec des matériaux qui sont bons pour vos fesses. Tous nos produits sont manufacturés par de petits français qui rêvent de belles fesses rebondis la nuit. <br>
+            40% de nos gains sont reversés à la lutte contre DAESH. Notre motto : Un Bête de boule en plus en liberté c'est un terroriste en moins dans le monde.
+          </p>
 				</div>
 			</div>
 		</div>
@@ -248,10 +253,10 @@
               <img src="img/butt-icon.svg" alt="" class="trousers">
             </div>
 					<div class="col-md-6 col-md-offset-3 sign-up">
-						<h2 class="logo-header">Précommande un jean B2B pour seulement 60€. Deux fois moins cher que le prix en boutique...</h2>
+						<h2 class="logo-header">Laisse-nous sublimer tes petites fesses. Reçois un coupon B2B et va choisir ton jean B2B en magazin pour seulement 60€ (50% moins cher)</h2>
 						<form name="signup-form" action="http://formspree.io/davidgeismar@wetennis.fr" id="conversion_form" method="POST">
-							<input id="email-input" class="signup-input" type="email" name="email_address" value="" placeholder="enter your email..." title="Please enter a valid email address." required>
-							<button type="submit" class="submit-btn"data-toggle="modal" data-target="#myModal">GO</button>
+							<input id="email-input" class="signup-input" type="email" name="email_address" value="" placeholder="Laisse ton mail et reçois le coupon..." title="Please enter a valid email address." required>
+							<button type="submit" class="submit-btn">GO</button>
 						</form>
 					</div>
 				</div>
@@ -259,9 +264,35 @@
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title text-center" id="myModalLabel">Félicitations !</h2>
+              </div>
+              <div class="modal-body text-center">
+                Vous recevrez dans quelques minutes, votre coupon B2B pour une réduction de -50% en magasin.
+                <br>
+                Vous pouvez également pré-commander dès maintenant votre jean B2B <strong>pour seulement 40€</strong> (120€ en magasin) et venir l'essayer et le récupérer directement en boutique.
+
+
+              <div class="btn btn-primary" id="payment_button">Faites plaisir à vos fesses !</div>
+               <!--  <form action="" method="POST" class="payment_button">
+                  <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_5gV3lLJvx0mc36rSRhKfrLho"
+                    data-amount="2000"
+                    data-name="Demo Site"
+                    data-description="2 widgets ($20.00)"
+                    data-image="/128x128.png"
+                    data-locale="auto">
+                  </script>
+                </form> -->
+              </div>
+              <div class="modal-footer">
+              </div>
             </div>
         </div>
       </div>
+
 		</section>
 		<footer id="contact">
 			<div class="container">
@@ -288,11 +319,13 @@
 		</footer>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery.flexslider.js"></script>
 		<script src="js/scripts.js"></script>
 		<script src="js/modernizr.js"></script>
 		<script src="js/waypoints.min.js"></script>
+
 	</body>
 </html>

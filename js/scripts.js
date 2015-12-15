@@ -38,6 +38,7 @@ $(window).load(function() {
 
 //OVERLAYS
 $(document).ready(function() {
+
   if (Modernizr.touch) {
     // show the close overlay button
     $(".close-overlay").removeClass("hidden");
@@ -77,9 +78,9 @@ $(document).ready(function() {
                 data: {message: email}, // Je sérialise les données (j'envoie toutes les valeurs présentes dans le formulaire)
                 success: function(data, textStatus, xhr) {
                     if(xhr.status==200)
-                        alert('Nous vous tiendrons au courant de nos dernières actu ! \n Wefoot');
-                    $('#email-input').val('');
-                    $('#myModal').popover('show');
+                        $('#email-input').val('');
+                        $('#myModal').modal('show');
+                    // $('#myModal').popover('show');
 
                 }
             });
@@ -88,6 +89,34 @@ $(document).ready(function() {
   }
 });
 
+
+$(document).ready(function() {
+   var handler = StripeCheckout.configure({
+      key: 'pk_test_5gV3lLJvx0mc36rSRhKfrLho',
+      image: '/img/documentation/checkout/marketplace.png',
+      locale: 'auto',
+      token: function(token) {
+        // Use the token to create the charge with a server-side script.
+        // You can access the token ID with `token.id`
+      }
+    });
+
+    $('#payment_button').on('click', function(e) {
+      // Open Checkout with further options
+      handler.open({
+        name: 'Demo Site',
+        description: '2 widgets',
+        currency: "eur",
+        amount: 2000
+      });
+      e.preventDefault();
+    });
+
+    // Close Checkout on page navigation
+    $(window).on('popstate', function() {
+      handler.close();
+    });
+})
 
 // SMOOTH NAV SCROLL
 $(function() {

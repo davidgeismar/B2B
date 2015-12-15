@@ -313,4 +313,7 @@ footer p { font-size: 13px; margin: 0; }
   height: 100px;
 }
 
+#payment_button{
+  margin-top: 25px;
+}
 
